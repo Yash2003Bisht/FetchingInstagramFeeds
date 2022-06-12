@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Fetching feeds of my Instagram </title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'><link rel="stylesheet" href="../static/style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- A Lightbox is basically a slider (carousel) inside of a modal.
+
+  Todos: fix active class (when you click on a photo, carousel in modal reverts to first slide) 
+ *solution: added data-slide-to and data-target to imgs
+-->
+
+<div class="container">
+  <span><a href="https://www.instagram.com/votoca47550/" target="_blank">Instagram Link</a></span>
+  <div class="row d-flex flex-wrap align-items-center" data-toggle="modal" data-target="#lightbox">
+    {% for data in data_lst %}
+      <div class="col-12 col-md-6 col-lg-3">
+        <img src="{{data.link}}" data-target="#indicators" data-slide-to="0" alt="" /> 
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.3/umd/popper.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js'></script>
+</body>
+</html>
